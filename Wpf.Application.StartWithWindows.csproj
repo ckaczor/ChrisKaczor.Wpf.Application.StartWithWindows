@@ -11,6 +11,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<Description>This library can be used to set an application to auto-start when Windows starts.</Description>
 		<PackageId>ChrisKaczor.Wpf.Application.StartWithWindows</PackageId>
+		<AssemblyName>ChrisKaczor.Wpf.Application.StartWithWindows</AssemblyName>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Update="README.md">
