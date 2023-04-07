@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<RootNamespace>ChrisKaczor.Wpf.Application</RootNamespace>
+		<Title>ChrisKaczor.Wpf.Application.StartWithWindows</Title>
+		<Authors>Chris Kaczor</Authors>
+		<Product>ChrisKaczor.Wpf.Application.StartWithWindows</Product>
+		<RepositoryUrl>https://github.com/ckaczor/ChrisKaczor.Wpf.Application.StartWithWindows</RepositoryUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Description>This library can be used to set an application to auto-start when Windows starts.</Description>
+		<PackageId>ChrisKaczor.Wpf.Application.StartWithWindows</PackageId>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Update="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+</Project>
