@@ -13,8 +13,26 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  appVersion: '1.0.$(Rev:r)'
 
 steps:
+
+steps:
+- task: Assembly-Info-NetCore@3
+  displayName: 'Set Assembly Info'
+  inputs:
+    Path: '$(Build.SourcesDirectory)'
+    FileNames: '**/*.csproj'
+    InsertAttributes: true
+    FileEncoding: 'utf-8'
+    WriteBOM: true
+    FailOnWarning: true
+    Authors: 'Chris Kaczor'
+    Copyright: 'Copyright $(date:YYYY) Chris Kaczor'
+    FileVersion: '$(appVersion)'
+    PackageVersion: '$(appVersion)'
+    UpdateBuildNumber: '$(Build.DefinitionName)_v$(appVersion)'
+    AddBuildTag: 'v$(appVersion)'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
