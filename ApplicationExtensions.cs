@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Reflection;
-using Microsoft.Win32;
 
 namespace ChrisKaczor.Wpf.Application
 {
@@ -15,7 +15,7 @@ namespace ChrisKaczor.Wpf.Application
 
         public static void SetStartWithWindows(this System.Windows.Application application, string applicationName, bool value)
         {
-            var applicationPath = $"\"{Assembly.GetEntryAssembly()!.Location}\"";
+            var applicationPath = $"\"{Environment.ProcessPath}\"";
 
             SetStartWithWindows(application, applicationName, applicationPath, value);
         }
