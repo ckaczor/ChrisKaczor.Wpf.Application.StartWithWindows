@@ -16,8 +16,6 @@ variables:
   appVersion: '1.0.$(Rev:r)'
 
 steps:
-
-steps:
 - task: Assembly-Info-NetCore@3
   displayName: 'Set Assembly Info'
   inputs:
