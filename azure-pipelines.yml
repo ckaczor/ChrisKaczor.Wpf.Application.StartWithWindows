@@ -13,9 +13,13 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  appVersion: '1.0.0.$(Rev:r)'
 
 steps:
+- task: GetRevision@1
+  displayName: 'Get Revision'
+  inputs:
+    VariableName: Revision
+
 - task: Assembly-Info-NetCore@3
   displayName: 'Set Assembly Info'
   inputs:
@@ -27,8 +31,8 @@ steps:
     FailOnWarning: true
     Authors: 'Chris Kaczor'
     Copyright: 'Copyright $(date:YYYY) Chris Kaczor'
-    FileVersion: '$(appVersion)'
-    PackageVersion: '$(appVersion)'
+    FileVersion: '1.0.0.$(Revision)'
+    PackageVersion: '1.0.0.$(Revision)'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
