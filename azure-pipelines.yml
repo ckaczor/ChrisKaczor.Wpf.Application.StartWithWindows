@@ -1,4 +1,4 @@
-name: 1.0.0.$(Rev:r)
+name: 1.0.$(Rev:r)
 
 pr: none
 
@@ -31,8 +31,8 @@ steps:
     FailOnWarning: true
     Authors: 'Chris Kaczor'
     Copyright: 'Copyright $(date:YYYY) Chris Kaczor'
-    FileVersion: '1.0.0.$(Revision)'
-    PackageVersion: '1.0.0.$(Revision)'
+    FileVersion: '1.0.$(Revision)'
+    PackageVersion: '1.0.$(Revision)'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
