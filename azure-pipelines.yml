@@ -1,4 +1,4 @@
-name: 1.0.$(Rev:r)
+name: 1.0.0.$(Rev:r)
 
 pr: none
 
@@ -13,7 +13,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  appVersion: '1.0.$(Rev:r)'
+  appVersion: '1.0.0.$(Rev:r)'
 
 steps:
 - task: Assembly-Info-NetCore@3
@@ -29,8 +29,6 @@ steps:
     Copyright: 'Copyright $(date:YYYY) Chris Kaczor'
     FileVersion: '$(appVersion)'
     PackageVersion: '$(appVersion)'
-    UpdateBuildNumber: '$(Build.DefinitionName)_v$(appVersion)'
-    AddBuildTag: 'v$(appVersion)'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
